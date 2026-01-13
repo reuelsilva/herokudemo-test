@@ -5,7 +5,7 @@ test.beforeEach(async ({ page }) => {
     await page.goto('https://the-internet.herokuapp.com/dynamic_controls');
 })
 
-test('Deve remover o checkbox ao clicar no botao Remove', async ({ page }) => {
+test.only('Deve remover o checkbox ao clicar no botao Remove', async ({ page }) => {
     await page.locator('#checkbox-example').getByRole("button").click();
     await page.waitForSelector('#message');
     // Validação: o texto “It’s gone!” esteja visível em tela.
